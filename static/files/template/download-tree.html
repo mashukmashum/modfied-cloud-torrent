@@ -15,7 +15,7 @@
       <i ng-show="!confirm" ng-click="preremove()" class="red trash icon"></i>
       <i ng-show="!deleting && confirm" ng-click="deleting = true; remove();" class="red check icon"></i>
       <i ng-show="deleting" class="grey notched circle loading icon"></i>
-      <a  href="http://www.youtubed.cf/drop/ext.php?url=https://torleech.herokuapp.com/download/{{ node.$path }}&fname={{ node.Name }}" target="_blank" >push to cloud</a>
+      <a  href="http://www.youtubed.cf/drop/ext.php?url=https://torleech.herokuapp.com/download/{{ node.$path }}&fname={{ node.Name }}" target="_blank" class="ui button" ng-class="green"><i class="cloud upload icon"></i>push to cloud</a>
     </span>
   </div>
   <div class="description">{{ node.Size | bytes }} updated {{ ago(node.Modified) }}</div>
