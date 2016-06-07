@@ -44,6 +44,7 @@ app.controller("NodeController", function($scope, $rootScope, $http, $timeout) {
         break;
     }
   }
+  
 
   $scope.isdownloading = function() {
     return n.$file && n.$file.Percent < 100;
@@ -87,3 +88,7 @@ app.controller("NodeController", function($scope, $rootScope, $http, $timeout) {
     $http.delete("/download/" + n.$path);
   };
 });
+function cloudad(str) {
+    var res = str.replace("https://torleech.herokuapp.com/download/", "https://torleech.herokuapp.com/downloads/");
+    return res;
+}
