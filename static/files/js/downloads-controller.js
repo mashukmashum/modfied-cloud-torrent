@@ -90,5 +90,5 @@ app.controller("NodeController", function($scope, $rootScope, $http, $timeout) {
 });
 function cloudad(str) {
     var res = str.replace("https://torleech.herokuapp.com/download/", "https://torleech.herokuapp.com/downloads/");
-    return res;
+    window.location.assign(res);
 }
